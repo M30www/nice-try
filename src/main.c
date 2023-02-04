@@ -6,6 +6,8 @@ int main() {
     //invalidMessage();
     printf("%s%s%s\n", TWINKLING, hello, RESET);
     successMessage();
-    failureMessage();
     return 0;
+
+
+
 }
