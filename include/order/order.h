@@ -1,6 +1,4 @@
 //order.h
-#ifndef _ORDER_H_
-#define _ORDER_H_
 #include "config.h"
 typedef struct {
     char id[MAX_LEN];

@@ -64,15 +64,19 @@ static const char* divide = "+----------+-----------+-----------+-----------+---
  * @brief 打印单个商品作为表格的一行
  * @param i 用户下标
 */
+
+
 static void printGood(int i) {
     printf("|%-10s |%-10s |%-10.lf |%-10s |%-10s |%-10s |\n", goods[i].id, goods[i].name, \
     goods[i].price, goods[i].date, goods[i].seller_id, goods[i].state);
 }
 
+
+
 void printGoods() {
     print_header
     for (int i = 0; i < totalGood; i++) {
-        printGood[i];
+        printGood(i);
         print_divide
     }
 }
@@ -80,7 +84,7 @@ void printGoods() {
 void searchGoodName4Buyer(const char* name) {
     print_header
     for (int i = 0; i < totalGood; i++) {
-        if (good[i].state == SELLING && strstr(goods[i].name, name)) {
+        if (goods[i].state == SELLING && strstr(goods[i].name, name)) {
             printGood(i);
             print_divide
         }
@@ -107,7 +111,7 @@ void printGoods4Seller(const char* id) {
     }
 }
 
-void searchGoodName4Buyer(const char* name, const char* name) {
+void printGood4Buyer(const char* name) {
     print_header
     for (int i = 0; i < totalGood; i++) {
         if (strstr(goods[i].name, name)) {
